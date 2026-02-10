@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="style-pro.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>MifarGPT Pro | Advanced AI Interface</title>
@@ -23,6 +24,7 @@
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
 
         body {
+            <div class="theme-switch" onclick="toggleTheme()"><i class="fas fa-adjust"></i></div>
             background-color: var(--bg-dark);
             color: var(--text-white);
             height: 100vh;
@@ -327,4 +329,6 @@
         }
     </script>
 </body>
+    <script src="api-handler.js"></script>
+<script src="script.js"></script>
 </html>
