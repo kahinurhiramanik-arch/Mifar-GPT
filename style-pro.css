@@ -1,0 +1,66 @@
+/* Light & Dark Mode Variables */
+:root {
+    --bg: #ffffff;
+    --text: #1a1a1a;
+    --sidebar: #f9f9f9;
+    --input-bg: #f0f0f0;
+    --border: #e5e5e5;
+    --accent: #10a37f;
+}
+
+[data-theme="dark"] {
+    --bg: #0d0d10;
+    --text: #ffffff;
+    --sidebar: #000000;
+    --input-bg: #1e1e22;
+    --border: #2d2d30;
+    --accent: #2563eb;
+}
+
+body { background: var(--bg); color: var(--text); transition: 0.3s; }
+
+/* Fixed Chatbar - ChatGPT Like */
+.bottom-section {
+    position: fixed;
+    bottom: 0;
+    left: 280px; /* Sidebar width */
+    right: 0;
+    background: linear-gradient(transparent, var(--bg) 20%);
+    padding: 20px 15%;
+    z-index: 1000;
+}
+
+@media (max-width: 768px) {
+    .bottom-section { left: 0; padding: 15px 5%; }
+}
+
+.input-wrapper {
+    background: var(--input-bg);
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+#userInput {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: var(--text);
+    padding: 10px;
+    outline: none;
+    font-size: 16px;
+    max-height: 200px;
+}
+
+/* Theme Toggle Button */
+.theme-switch {
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 20px;
+    z-index: 1001;
+      }
